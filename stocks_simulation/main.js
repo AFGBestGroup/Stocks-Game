@@ -7,11 +7,10 @@ const DEFAULT_MONEY = 10_000;
 // 5 days/second?
 const TIME_JUMP = 5 * 24 * 60 * 60;
 
-const crashRate=30;
+const crashRate = 30;
 
 let stocks = [new Stock('Pear', 100)];
 let bank = new Bank(DEFAULT_MONEY);
-
 
 function updatePage() {
   let contentToUpdate = {
@@ -30,20 +29,22 @@ function rand(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-function isCrashed(){
-  return Math.floor(Math.random()*crashRate)==1;
+function isCrashed() {
+  return Math.floor(Math.random() * crashRate) == 1;
 }
 
 setInterval(updatePage, 50);
 
-setInterval(() => {
+function updateStockPrice() {
   stocks[0].cost += rand(-5, 5);
-}, 700);
+}
 
-window.buyPear = (amount) => {
+setInterval(updateStockPrice, 700);
+
+window.buyPear = function buyPear(amount) {
   stocks[0].buy(amount, bank);
 };
 
-window.sellPear = (amount) => {
+window.sellPear = function sellPear(amount) {
   stocks[0].sell(amount, bank);
 };
