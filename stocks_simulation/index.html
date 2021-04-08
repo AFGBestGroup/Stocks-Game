@@ -5,17 +5,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Journey Stocks</title>
+  <script type="module" src="/main.js"></script>
 </head>
 
 <body>
-  <div id="app"></div>
   <p id="balance"></p>
   <br>
   <p id="pear-cost"></p>
   <p id="pear-amount"></p>
-  <button onclick="buyPear()">Buy</button>
-  <button onclick="sellPear()">Sell</button>
-  <script type="module" src="/main.js"></script>
+  <button onclick="buyPear(1)">Buy</button>
+  <button onclick="buyPear(10)">Buy 10</button>
+  <button onclick="sellPear(1)">Sell</button>
+  <button onclick="sellPear(10)">Sell 10</button>
 </body>
 
 </html>
