@@ -1,6 +1,6 @@
-import './style.css';
-import Bank from './Bank';
-import Stock from './Stock';
+// import './style.css';
+import Bank from './Bank.js';
+import Stock from './Stock.js';
 
 const DEFAULT_MONEY = 10_000;
 
