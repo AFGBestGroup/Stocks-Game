@@ -36,7 +36,10 @@ function isCrashed() {
 setInterval(updatePage, 50);
 
 function updateStockPrice() {
-  stocks[0].cost += rand(-5, 5);
+if(isCrashed())
+  stocks[0].cost += rand(-30,-10);
+else
+  stocks[0].cost += rand(-5, 8);
 }
 
 setInterval(updateStockPrice, 700);
