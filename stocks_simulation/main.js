@@ -7,8 +7,11 @@ const DEFAULT_MONEY = 10_000;
 // 5 days/second?
 const TIME_JUMP = 5 * 24 * 60 * 60;
 
+const crashRate=30;
+
 let stocks = [new Stock('Pear', 100)];
 let bank = new Bank(DEFAULT_MONEY);
+
 
 function updatePage() {
   let contentToUpdate = {
@@ -25,6 +28,10 @@ function updatePage() {
 
 function rand(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function isCrashed(){
+  return Math.floor(Math.random()*crashRate)==1;
 }
 
 setInterval(updatePage, 50);
