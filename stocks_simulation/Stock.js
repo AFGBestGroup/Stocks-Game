@@ -11,10 +11,20 @@ export default class Stock {
     }
   }
 
+  buyAll(bank) {
+    let total = bank.balance;
+    let amount = Math.floor(total / cost);
+    this.buy(amount, bank);
+  }
+
   sell(amount, bank) {
     if (amount <= this.shares) {
       this.shares -= amount;
       bank.deposit(amount * this.cost);
     }
+  }
+
+  sellAll(bank) {
+    this.sell(this.shares, bank);
   }
 }
