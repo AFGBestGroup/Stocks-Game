@@ -13,7 +13,7 @@ export default class Stock {
 
   buyAll(bank) {
     let total = bank.balance;
-    let amount = Math.floor(total / cost);
+    let amount = Math.floor(total / this.cost);
     this.buy(amount, bank);
   }
 
