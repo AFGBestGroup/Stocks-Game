@@ -36,18 +36,24 @@ function isCrashed() {
 setInterval(updatePage, 50);
 
 function updateStockPrice() {
-  if(isCrashed())
-      stocks[0].cost += rand(-30,-10);
-  else
-      stocks[0].cost += rand(-5, 8);
+  if (isCrashed()) stocks[0].cost += rand(-30, -10);
+  else stocks[0].cost += rand(-5, 8);
 }
 
 setInterval(updateStockPrice, 700);
 
-window.buy = function buy(amount,index) {
+window.buy = function buy(amount, index) {
   stocks[index].buy(amount, bank);
 };
 
-window.sell = function sell(amount,index) {
+window.sell = function sell(amount, index) {
   stocks[index].sell(amount, bank);
+};
+
+window.sellAll = function sellAll(index) {
+  stocks[index].sellAll(bank);
+};
+
+window.buyAll = function buyAll(index) {
+  stocks[index].buyAll(bank);
 };
