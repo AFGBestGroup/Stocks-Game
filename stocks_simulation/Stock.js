@@ -1,8 +1,9 @@
 export default class Stock {
-  constructor(name, cost) {
+  constructor(name, cost, growthRate) {
     this.name = name;
     this.shares = 0;
     this.cost = cost;
+    this.growthRate = growthRate;
   }
 
   buy(amount, bank) {

@@ -9,7 +9,7 @@ const TIME_JUMP = 5 * 24 * 60 * 60;
 
 const crashRate = 20;
 
-let stocks = [new Stock('Pear', 100), new Stock('Doodle', 150)];
+let stocks = [new Stock('Pear', 100, 1), new Stock('Doodle', 150, 1.25), new Stock('Mass Academy', 125, 0.8)];
 let bank = new Bank(DEFAULT_MONEY);
 
 function updatePage() {
@@ -42,6 +42,7 @@ function buildHTML(){
     div.appendChild(labelElement);
     div.appendChild(costElement);
     div.appendChild(amountElement);
+
   }
   return div;
 
@@ -58,8 +59,11 @@ function isCrashed() {
 setInterval(updatePage, 50);
 
 function updateStockPrice() {
-  if (isCrashed()) stocks[0].cost += rand(-30, -10);
-  else stocks[0].cost += rand(-5, 8);
+  for(var s of stocks){
+    if (isCrashed()) s.cost += rand(-30*s.growthRate, -10*s.growthRate);
+    else s.cost += rand(-5*s.growthRate, 8*s.growthRate);
+  }
+
 }
 
 setInterval(updateStockPrice, 700);
