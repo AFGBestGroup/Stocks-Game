@@ -39,6 +39,7 @@ function buildHTML(){
     var amountElement = document.createElement("p"); // <p> </p>
     var amount = document.createTextNode(stock.shares); // amount
     amountElement.appendChild(amount); // <p> amount </p>
+
     div.appendChild(labelElement);
     div.appendChild(costElement);
     div.appendChild(amountElement);
@@ -48,20 +49,26 @@ function buildHTML(){
 
 }
 
+
 function rand(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+//Happens at constant rate, for now
 function isCrashed() {
   return Math.floor(Math.random() * crashRate) == 1;
 }
 
-setInterval(updatePage, 50);
+setInterval(updatePage, 100);
 
 function updateStockPrice() {
   for(var s of stocks){
-    if (isCrashed()) s.cost += rand(-30*s.growthRate, -10*s.growthRate);
-    else s.cost += rand(-5*s.growthRate, 8*s.growthRate);
+    if (s.cost<=30*s.growthRate)
+      s.cost += rand(0,8*s.growthRate);
+    else if (isCrashed())
+      s.cost += rand(-30*s.growthRate, -15*s.growthRate);
+    else
+      s.cost += rand(-5*s.growthRate, 8*s.growthRate);
   }
 
 }
