@@ -4,7 +4,8 @@ import Stock from './Stock.js';
 
 const DEFAULT_MONEY = 10_000;
 
-// 1 month/second
+// 1 fake month / 1 real second
+//Overall game should last 5 real minutes --> 25 fake years
 const TIME_JUMP = 31 * 24 * 60 * 60;
 
 const crashRate = 20;
