@@ -15,9 +15,9 @@ const crashRate = 20;
 let currentDay = 0;
 
 let stocks = [
-  new Stock('Pear', 100, 1),
-  new Stock('Doodle', 150, 1.25),
-  new Stock('Mass Academy', 125, 0.8),
+  new Stock('Pear', AAPL[0], 1),
+  new Stock('Doodle', GOOG[0], 1.25),
+  new Stock('Mass Academy', MARK[0], 0.8),
 ];
 
 function rand(min, max) {
