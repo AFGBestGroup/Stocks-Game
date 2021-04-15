@@ -13,7 +13,7 @@
   <div id="app">
     <p>Balance: ${{bank.balance.toLocaleString()}}</p>
     <div v-for="(stock, index) in stocks">
-      <p>{{stock.name}}</p>
+      <p><b>{{stock.name}}</b></p>
       <p>Cost: ${{stock.cost.toLocaleString()}}</p>
       <p v-if="stock.shares > 0">Shares owned: {{stock.shares}}</p>
       <button v-on:click="buy(1, index)">Buy 1</button>
