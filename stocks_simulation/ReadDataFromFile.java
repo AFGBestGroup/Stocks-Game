@@ -12,7 +12,7 @@ public class ReadDataFromFile {
 		//load("C:\\Users\\iangr\\Desktop\\MAMS Stuff\\STEM and STW\\STEM I\\STEM I Main Project\\Raw_Data\\THE-ALL-IMPORTANT-EXCEL-SHEET.xslx");
 		pick();
 	}
-	
+
 	/**
 	 * Loads a list of words from a given text file
 	 * @param source the name of the file as an absolute path (ex. "C:\\CS\\Students\\studentNames.csv")
@@ -20,24 +20,25 @@ public class ReadDataFromFile {
 	public static String[][] load(String source)
 	{
 		// Construct the Scanner and File objects for reading
-		int numPlayers=26;
-		String[][] data = new String[numPlayers][9];
+		int numRows=26;
+		int numColumns=8;
+		String[][] data = new String[numRows][numColumns];
 		try  {
 			File inputFile = new File(source);
 			Scanner in = new Scanner(inputFile);
 			// Read the input file
-			
-			for(int i=0;i<numPlayers;i++)  {
+
+			for(int i=0;i<numRows;i++)  {
 				String line = in.nextLine();
 				String[] dataForLineI = line.split(","); // The data is delimited by a comma ,
-				for(int j=0;j<9;j++) {
+				for(int j=0;j<numColumns;j++) {
 					//System.out.println("(i,j)-> (" +i+ " ," + j + ")");
 					data[i][j]=dataForLineI[j];
 				}
-				
+
 			}
 			printData(data);
-			
+
 
 			in.close();
 		}
@@ -47,7 +48,7 @@ public class ReadDataFromFile {
 		}
 		return data;
 	}
-	
+
 	/**
 	 * Loads a selected file from a pop-up dialog window
 	 */
@@ -59,7 +60,7 @@ public class ReadDataFromFile {
 			load(chooser.getSelectedFile().getAbsolutePath());
 		}
 	}
-	
+
 	/** Prints the data for testing purposes
 	 * @param data the data to be printed
 	 */
