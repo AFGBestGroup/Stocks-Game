@@ -1,6 +1,9 @@
 // import './style.css';
 import Bank from './Bank.js';
 import Stock from './Stock.js';
+import {
+  AAPL,GOOG,MARK
+} from './HistoricalData.js';
 
 const DEFAULT_MONEY = 10_000;
 
@@ -9,6 +12,7 @@ const DEFAULT_MONEY = 10_000;
 const TIME_JUMP = 31 * 24 * 60 * 60;
 
 const crashRate = 20;
+let currentDay = 0;
 
 let stocks = [
   new Stock('Pear', 100, 1),
@@ -49,13 +53,10 @@ const App = {
   },
   mounted() {
     setInterval(() => {
-      for (var s of this.stocks) {
-        if (s.cost <= 30 * s.growthRate)
-          s.cost += rand(0, 8 * s.growthRate);
-        else if (isCrashed())
-          s.cost += rand(-30 * s.growthRate, -15 * s.growthRate);
-        else s.cost += rand(-5 * s.growthRate, 8 * s.growthRate);
-      }
+      this.stocks[0].cost=AAPL[currentDay];
+      this.stocks[1].cost=GOOG[currentDay];
+      this.stocks[2].cost=MARK[currentDay];
+      currentDay++;
     }, 700);
   },
 };
