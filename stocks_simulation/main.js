@@ -9,8 +9,6 @@ const DEFAULT_MONEY = 10_000;
 //Overall game should last 5 real minutes --> 25 fake years
 const TIME_JUMP = 31 * 24 * 60 * 60;
 
-const crashRate = 20;
-
 let stocks = [
   new Stock('Pear', AAPL[0], 1),
   new Stock('Doodle', GOOG[0], 1.25),

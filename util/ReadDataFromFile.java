@@ -20,7 +20,7 @@ public class ReadDataFromFile {
 	public static String[][] load(String source)
 	{
 		// Construct the Scanner and File objects for reading
-		int numRows=1250;
+		int numRows=26;
 		int numColumns=8;
 		String[][] data = new String[numRows][numColumns];
 		try  {

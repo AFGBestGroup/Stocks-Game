@@ -19,7 +19,7 @@
 <body>
   <div id="app">
     <p>Balance: ${{displayNumber(bank.balance)}}</p>
-    {{currentDay}}
+    Day {{currentDay}}
     <div v-for="(stock, index) in stocks">
       <div v-if="currentDay >= index * 30">
         <p><b>{{stock.name}}</b></p>
