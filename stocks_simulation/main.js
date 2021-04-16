@@ -1,9 +1,7 @@
 // import './style.css';
 import Bank from './Bank.js';
 import Stock from './Stock.js';
-import {
-  AAPL,GOOG,MARK
-} from './HistoricalData.js';
+import { AAPL, GOOG, MARK } from './HistoricalData.js';
 
 const DEFAULT_MONEY = 10_000;
 
@@ -12,7 +10,6 @@ const DEFAULT_MONEY = 10_000;
 const TIME_JUMP = 31 * 24 * 60 * 60;
 
 const crashRate = 20;
-let currentDay = 0;
 
 let stocks = [
   new Stock('Pear', AAPL[0], 1),
@@ -20,23 +17,23 @@ let stocks = [
   new Stock('Mass Academy', MARK[0], 0.8),
 ];
 
-function rand(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-function isCrashed() {
-  return Math.floor(Math.random() * crashRate) == 1;
-}
-
 const App = {
   data() {
     return {
       bank: new Bank(DEFAULT_MONEY),
       stocks: stocks,
+      currentDay: 0,
     };
   },
 
   methods: {
+    displayNumber(num) {
+      return num.toLocaleString(undefined, {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      });
+    },
+
     buy(amount, index) {
       this.stocks[index].buy(amount, this.bank);
     },
@@ -53,10 +50,10 @@ const App = {
   },
   mounted() {
     setInterval(() => {
-      this.stocks[0].cost=AAPL[currentDay];
-      this.stocks[1].cost=GOOG[currentDay];
-      this.stocks[2].cost=MARK[currentDay];
-      currentDay++;
+      this.stocks[0].cost = AAPL[this.currentDay];
+      this.stocks[1].cost = GOOG[this.currentDay];
+      this.stocks[2].cost = MARK[this.currentDay];
+      this.currentDay++;
     }, 700);
   },
 };
