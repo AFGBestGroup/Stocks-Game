@@ -9,13 +9,22 @@ const DEFAULT_MONEY = 10_000;
 //Overall game should last 5 real minutes --> 25 fake years
 const TIME_JUMP = 31 * 24 * 60 * 60;
 
+function rand(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+let startDay = 0;
+//let startDay = rand(0,820);
+
 let stocks = [
-  new Stock('Pear', AAPL[0], 1),
-  new Stock('Doodle', GOOG[0], 1.25),
-  new Stock('Mass Academy', MARK[0], 0.8),
+  new Stock('Pear', AAPL[startDay]),
+  new Stock('Doodle', GOOG[startDay]),
+  new Stock('Mass Academy', MARK[startDay]),
 ];
 
 let salary = 150;
+
+
 
 const App = {
   data() {
@@ -50,9 +59,9 @@ const App = {
   },
   mounted() {
     setInterval(() => {
-      this.stocks[0].cost = AAPL[this.currentDay];
-      this.stocks[1].cost = GOOG[this.currentDay];
-      this.stocks[2].cost = MARK[this.currentDay];
+      this.stocks[0].cost = AAPL[1+this.currentDay+startDay];
+      this.stocks[1].cost = GOOG[1+this.currentDay+startDay];
+      this.stocks[2].cost = MARK[1+this.currentDay+startDay];
       if(this.currentDay % 7 == 0 && this.currentDay != 0){
         this.bank.balance+=salary;
       }
