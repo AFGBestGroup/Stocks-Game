@@ -14,7 +14,8 @@ function rand(min, max) {
 }
 
 let startDay = 0;
-//let startDay = rand(0,820);
+//let startDay = rand(0,885);
+//885 = 1250 - 365
 
 let stocks = [
   new Stock('Pear', AAPL[startDay]),
@@ -56,6 +57,14 @@ const App = {
     buyAll(index) {
       this.stocks[index].buyAll(this.bank);
     },
+
+    calcPortValue(){
+      let totalStockValue = 0;
+      for(var s of this.stocks){
+        totalStockValue += s.cost * s.shares;
+      }
+      return this.bank.balance+totalStockValue;
+    }
   },
   mounted() {
     setInterval(() => {
