@@ -15,6 +15,8 @@ let stocks = [
   new Stock('Mass Academy', MARK[0], 0.8),
 ];
 
+let salary = 150;
+
 const App = {
   data() {
     return {
@@ -51,6 +53,9 @@ const App = {
       this.stocks[0].cost = AAPL[this.currentDay];
       this.stocks[1].cost = GOOG[this.currentDay];
       this.stocks[2].cost = MARK[this.currentDay];
+      if(this.currentDay % 7 == 0 && this.currentDay != 0){
+        this.bank.balance+=salary;
+      }
       this.currentDay++;
     }, 700);
   },
