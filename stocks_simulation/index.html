@@ -25,6 +25,9 @@
       <div v-if="currentDay >= index * 30">
         <p><b>{{stock.name}}</b></p>
         <p>Cost: ${{displayNumber(stock.cost)}}</p>
+        <div v-if="stock.isDividendStock()">
+            <p>Dividend per Share: ${{displayNumber(stock.rate)}}</p>
+        </div>
         <p v-if="stock.shares > 0">Shares owned: {{stock.shares}}</p>
         <button v-on:click="buy(1, index)">Buy 1</button>
         <button v-on:click="buy(10, index)">Buy 10</button>

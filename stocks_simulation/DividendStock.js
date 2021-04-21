@@ -1,13 +1,12 @@
-export class DividendStock extends Stock {
+import Stock from './Stock.js';
+export default class DividendStock extends Stock {
   constructor(name, cost, rate){
-    this.name=name;
-    this.cost=cost;
-    this.shares=0;
+    super(name,cost);
     this.rate=rate;
   }
 
   getDividend(){
-    return shares*rate;
+    return this.shares*this.rate;
   }
 
   //@Override
