@@ -16,6 +16,7 @@ function rand(min, max) {
 let startDay = 0;
 //let startDay = rand(0,885);
 //885 = 1250 - 365
+let endDay = 365;
 
 let stocks = [
   new Stock('Pear', AAPL[startDay]),
@@ -24,8 +25,6 @@ let stocks = [
 ];
 
 let salary = 150;
-
-
 
 const App = {
   data() {
@@ -68,13 +67,25 @@ const App = {
   },
   mounted() {
     setInterval(() => {
-      this.stocks[0].cost = AAPL[1+this.currentDay+startDay];
-      this.stocks[1].cost = GOOG[1+this.currentDay+startDay];
-      this.stocks[2].cost = MARK[1+this.currentDay+startDay];
-      if(this.currentDay % 7 == 0 && this.currentDay != 0){
-        this.bank.balance+=salary;
+      if(this.currentDay >= endDay){
+        window.location.replace("./EndScreen.html");
+      } else {
+        this.stocks[0].cost = AAPL[1+this.currentDay+startDay];
+        this.stocks[1].cost = GOOG[1+this.currentDay+startDay];
+        this.stocks[2].cost = MARK[1+this.currentDay+startDay];
+        if(this.currentDay % 7 == 0 && this.currentDay != 0){
+          this.bank.balance+=salary;
+        }
+        if(this.currentDay % Math.floor(365/4) ==0) {
+          //Let user know what's going on
+          for(var s of stocks){
+            if(s.isDividendStock())
+              this.bank.balance += s.getDividend();
+          }
+        }
+        this.currentDay++;
       }
-      this.currentDay++;
+
     }, 700);
   },
 };

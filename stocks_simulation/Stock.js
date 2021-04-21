@@ -27,4 +27,8 @@ export default class Stock {
   sellAll(bank) {
     this.sell(this.shares, bank);
   }
+
+  isDividendStock() {
+    return false;
+  }
 }
