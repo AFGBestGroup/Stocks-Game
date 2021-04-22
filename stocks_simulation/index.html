@@ -6,40 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Journey Stocks</title>
   <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.prod.js"></script>
-  <script type="module" src="main.js"></script>
 </head>
 
+<img src = "images/TestLogo.png"><img>
+<div>
+  <p> Welcome to Journey.
+    Journey is a simple, interactive stock simulation designed to assist in educating the user in how to navigate investments and increase their financial literacy.
+    Through this simulation you will be guided through building and managing your own personal stock portfolio.
+    In addition to this, you will have to manage real world situations such as receiving active vs. passive income, and possible financial necessities that could drain your bank account.
+    Don’t worry. We’ll start you off easy. Good luck and have fun!
+</p>
 
-<!--
-  Stock 1: Day 0
-  Stock 2: Day 30
-  Stock 3: Day 60
- -->
+<button>
+  <a href = "Tutorial.html">Start Tutorial</a>
+</button>
+<button>
+  <a href = "FullGame.html">Play Full Game</a>
+</button>
 
-<body>
-  <div id="app">
-    <p>Money available for trading: ${{displayNumber(bank.balance)}}</p>
-    <p>Portfolio Value: ${{displayNumber(calcPortValue())}}</p>
-    Day {{currentDay}}
-    <div v-for="(stock, index) in stocks">
-      <div v-if="currentDay >= index * 30">
-        <p><b>{{stock.name}}</b></p>
-        <p>Cost: ${{displayNumber(stock.cost)}}</p>
-        <div v-if="stock.isDividendStock()">
-            <p>Dividend per Share: ${{displayNumber(stock.rate)}}</p>
-        </div>
-        <p v-if="stock.shares > 0">Shares owned: {{stock.shares}}</p>
-        <button v-on:click="buy(1, index)">Buy 1</button>
-        <button v-on:click="buy(10, index)">Buy 10</button>
-        <button v-on:click="buyAll(index)">Buy All</button>
-        <br>
-        <button v-on:click="sell(1, index)">Sell 1</button>
-        <button v-on:click="sell(10, index)">Sell 10</button>
-        <button v-on:click="sellAll(index)">Sell All</button>
-        <br>
-      </div>
-    </div>
-  </div>
-</body>
+</div>
 
 </html>
