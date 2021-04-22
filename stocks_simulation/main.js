@@ -33,7 +33,7 @@ const App = {
     return {
       bank: new Bank(DEFAULT_MONEY),
       stocks: stocks,
-      currentDay: 90,
+      currentDay: 0,
     };
   },
 
