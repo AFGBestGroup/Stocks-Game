@@ -14,16 +14,16 @@
 
     <p v-if="stock.shares > 0">Shares owned: {{ stock.shares }}</p>
 
-    <button v-on:click="buy(sharesToBuy, index)">Buy</button>
+    <button v-on:click="buy(sharesToBuy)">Buy</button>
     <input
       type="number"
-      id="sharesToBuy"
+      v-model.number="sharesToBuy"
       name="Number of shares"
       onkeypress="return event.charCode >=48"
       min="0"
     /><br />
-    <div v-if="sharesToBuy != 0">
-      <p>That will cost: {{ stock.cost * sharesToBuy }}</p>
+    <div v-if="sharesToBuy != undefined && sharesToBuy != 0">
+      <p>That will cost: ${{ displayNumber(stock.cost * sharesToBuy) }}</p>
     </div>
     <div v-else>
       <br />
@@ -32,14 +32,13 @@
     <button v-on:click="sell(sharesToSell)">Sell</button>
     <input
       type="number"
-      id="sharesToSell"
-      v-model="sharesToSell"
+      v-model.number="sharesToSell"
       name="Number of shares"
       onkeypress="return event.charCode >=48"
       min="0"
     /><br />
-    <div v-if="sharesToSell != undefined">
-      <p>You will earn: {{ stock.cost * sharesToSell }}</p>
+    <div v-if="sharesToSell != undefined && sharesToSell != 0">
+      <p>You will earn: ${{ displayNumber(stock.cost * sharesToSell) }}</p>
     </div>
     <div v-else>
       <br />
@@ -55,7 +54,7 @@ import { displayNumber } from "../util";
 export default {
   props: ["name"],
   data() {
-    return { state };
+    return { state, sharesToSell: 0, sharesToBuy: 0 };
   },
 
   computed: {
