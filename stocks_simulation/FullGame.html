@@ -7,6 +7,7 @@
   <title>Journey Stocks</title>
   <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.prod.js"></script>
   <script type="module" src="main.js"></script>
+  <link rel="stylesheet" href= "style.css">
 </head>
 
 
@@ -18,9 +19,16 @@
 
 <body>
   <div id="app">
-    <p>Money available for trading: ${{displayNumber(bank.balance)}}</p>
-    <p>Portfolio Value: ${{displayNumber(calcPortValue())}}</p>
-    Day {{currentDay}}
+    <p>Day Count: <br> {{currentDay}}</p>
+    <br>
+    <h1>Balances</h1>
+
+    <p class="inline">Portfolio Value:</p>
+    <p class="inline floatright">Money available for trading:</p>
+    <br>
+    <p class="inline"> ${{displayNumber(bank.balance)}}</p>
+    <p class="inline floatright">${{displayNumber(calcPortValue())}}</p>
+
     <div v-for="(stock, index) in stocks">
       <div v-if="currentDay >= index * 30">
         <p><b>{{stock.name}}</b></p>

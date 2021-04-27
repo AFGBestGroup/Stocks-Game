@@ -2,7 +2,28 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+body{
+	background: #c6e2f0;
+	margin: 0px;
+}
+
+p {
+	font-family: "Maven Pro", Calibri, Helvetica;
+	/* Comic Sans in Quotes because it's two words, it reads as two different things if you don't use quotes*/
+	font-size: 1.25em;
+	padding: 2% 2%;
+	margin: auto 2%;
+}
+
+.inline{
+  margin: 0px;
+	display: inline;
+}
+
+.floatright {
+	float: right;
 }
