@@ -11,9 +11,16 @@ body{
 	margin: 0px;
 }
 
+h1 {
+	font-size: 2em
+}
+
+h2{
+	font-size: 1.5em
+}
+
 p {
 	font-family: "Maven Pro", Calibri, Helvetica;
-	/* Comic Sans in Quotes because it's two words, it reads as two different things if you don't use quotes*/
 	font-size: 1.25em;
 	padding: 2% 2%;
 	margin: auto 2%;

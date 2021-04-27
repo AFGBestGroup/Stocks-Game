@@ -8,14 +8,8 @@
   <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.prod.js"></script>
   <script type="module" src="main.js"></script>
   <link rel="stylesheet" href= "style.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.css">
 </head>
-
-
-<!--
-  Stock 1: Day 0
-  Stock 2: Day 30
-  Stock 3: Day 60
- -->
 
 <body>
   <div id="app">
@@ -23,12 +17,26 @@
     <br>
     <h1>Balances</h1>
 
-    <p class="inline">Portfolio Value:</p>
-    <p class="inline floatright">Money available for trading:</p>
-    <br>
-    <p class="inline"> ${{displayNumber(bank.balance)}}</p>
-    <p class="inline floatright">${{displayNumber(calcPortValue())}}</p>
-
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <p>Portfolio Value:</p>
+        </div>
+        <div class="col-sm">
+          <p>Money available for trading:</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <p>${{displayNumber(bank.balance)}}</p>
+        </div>
+        <div class="col-sm">
+          <p>${{displayNumber(calcPortValue())}}</p>
+        </div>
+      </div>
+    </div>
+    
+    <h1>Your Stocks</h1>
     <div v-for="(stock, index) in stocks">
       <div v-if="currentDay >= index * 30">
         <p><b>{{stock.name}}</b></p>
