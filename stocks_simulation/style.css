@@ -26,6 +26,9 @@ p {
 	margin: auto 2%;
 }
 
+input {
+  width: 5em;
+}
 .inline{
   margin: 0px;
 	display: inline;

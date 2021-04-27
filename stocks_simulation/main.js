@@ -21,7 +21,7 @@ let startDay = 0;
 let endDay = 365;
 
 let stocks = [
-  new Stock('Pear', AAPL[startDay]),
+  new DividendStock('Pear', AAPL[startDay],0.21),
   new Stock('Doodle', GOOG[startDay]),
   new Stock('Mass Academy', MARK[startDay]),
   new DividendStock('BSAS', T[startDay], 0.52)
