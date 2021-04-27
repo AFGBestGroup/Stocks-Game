@@ -14,6 +14,7 @@ function rand(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+
 let startDay = 0;
 //let startDay = rand(0,885);
 //885 = 1250 - 365
@@ -34,6 +35,7 @@ const App = {
       bank: new Bank(DEFAULT_MONEY),
       stocks: stocks,
       currentDay: 0,
+      imageIndex: 0,
     };
   },
 
