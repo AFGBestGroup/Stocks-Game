@@ -2,7 +2,7 @@ import Bank from './Bank';
 import Stock from './Stock';
 import DividendStock from './DividendStock';
 import { AAPL, GOOG, T } from './HistoricalData';
-import { reactive } from 'Vue';
+import { reactive } from 'vue';
 
 let DEFAULT_MONEY = 10_000;
 let state = reactive({
