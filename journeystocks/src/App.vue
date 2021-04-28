@@ -1,11 +1,15 @@
 <template>
-  <FullGame />
+  <div>
+    <router-link to="/">Home</router-link>
+    <router-link to="/game">Full Game</router-link>
+
+    <router-view></router-view>
+  </div>
 </template>
 
 <script setup>
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap-grid.min.css";
-import FullGame from "./FullGame.vue";
 </script>
 
 <style>
