@@ -6,6 +6,7 @@
     <p>Cost: ${{ displayNumber(stock.cost) }}</p>
     <div v-if="stock.isDividendStock()">
       <p>Dividend per Share: ${{ displayNumber(stock.rate) }}</p>
+      <p>Pays on day: {{Math.floor(365/4)*Math.ceil(state.currentDay/Math.floor(365/4))}}</p>
     </div>
     <div v-else>
       <br />

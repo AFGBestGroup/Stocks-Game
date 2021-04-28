@@ -9,7 +9,7 @@ let state = reactive({
   bank: new Bank(DEFAULT_MONEY),
   currentDay: 0,
   stocks: {
-    pear: new Stock('Pear', AAPL[0]),
+    pear: new DividendStock('Pear', AAPL[0], 0.21),
     doodle: new Stock('Doodle', GOOG[0]),
     bsas: new DividendStock('BSAS', T[0], 0.52),
   },
