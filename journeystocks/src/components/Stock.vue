@@ -9,8 +9,8 @@
       <p>Pays on day: {{Math.floor(365/4)*Math.ceil(state.currentDay/Math.floor(365/4))}}</p>
     </div>
     <div v-else>
-      <br />
-      <br />
+      <p></p>
+      <p></p>
     </div>
 
     <p v-if="stock.shares > 0">Shares owned: {{ stock.shares }}</p>

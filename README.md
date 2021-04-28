@@ -10,3 +10,4 @@
 * Link to the website here: https://stocks-game.pages.dev/
 ## TODO
 * Comment code
+* Make stock info in a grid fashion - bootstrap

@@ -37,8 +37,15 @@
     </p>
     <div class="container">
       <div class="row">
-        <Stock name="pear" />
-        <Stock name="bsas" />
+        <div class="col-sm stock">
+          <Stock name="pear" />
+        </div>
+        <div class ="col-sm stock">
+            <Stock name="doodle" />
+        </div>
+        <div class="col-sm stock">
+          <Stock name="bsas" />
+        </div>
       </div>
     </div>
     <p>
