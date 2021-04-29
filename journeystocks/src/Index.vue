@@ -16,7 +16,7 @@
       <a href="Tutorial.html">Start Tutorial</a>
     </button>
     <button>
-      <a href="FullGame.html">Play Full Game</a>
+      <a href="/game">Play Full Game</a>
     </button>
   </div>
 </template>
