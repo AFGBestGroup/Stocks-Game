@@ -6,16 +6,22 @@
     <p>Cost: ${{ displayNumber(stock.cost) }}</p>
     <div v-if="stock.isDividendStock()">
       <p>Dividend per Share: ${{ displayNumber(stock.rate) }}</p>
-      <p>Pays on day: {{Math.floor(365/4)*Math.ceil(state.currentDay/Math.floor(365/4))}}</p>
+      <p>
+        Pays on day:
+        {{
+          Math.floor(365 / 4) *
+          Math.ceil(state.currentDay / Math.floor(365 / 4))
+        }}
+      </p>
     </div>
     <div v-else>
-      <p></p>
-      <p></p>
+      <p>Dividend per Share: N/A</p>
+      <p>Pays on day: N/A</p>
     </div>
 
     <p v-if="stock.shares > 0">Shares owned: {{ stock.shares }}</p>
 
-    <button v-on:click="buy(sharesToBuy)">Buy</button>
+    <button class="btn btn-success" v-on:click="buy(sharesToBuy)">Buy</button>
     <input
       type="number"
       v-model.number="sharesToBuy"
@@ -30,7 +36,7 @@
       <br />
     </div>
     <br />
-    <button v-on:click="sell(sharesToSell)">Sell</button>
+    <button class="btn btn-danger" v-on:click="sell(sharesToSell)">Sell</button>
     <input
       type="number"
       v-model.number="sharesToSell"
@@ -57,10 +63,10 @@ export default {
   data() {
     return { state, sharesToSell: 0, sharesToBuy: 0 };
   },
-  
-/**
- * Updates the stocks after a set interval.
- */
+
+  /**
+   * Updates the stocks after a set interval.
+   */
   computed: {
     stock: function () {
       return state.stocks[this.name];
