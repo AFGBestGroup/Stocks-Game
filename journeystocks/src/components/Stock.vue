@@ -57,7 +57,10 @@ export default {
   data() {
     return { state, sharesToSell: 0, sharesToBuy: 0 };
   },
-
+  
+/**
+ * Updates the stocks after a set interval.
+ */
   computed: {
     stock: function () {
       return state.stocks[this.name];

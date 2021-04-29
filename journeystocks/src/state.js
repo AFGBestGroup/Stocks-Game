@@ -5,6 +5,10 @@ import { AAPL, GOOG, T } from './HistoricalData';
 import { reactive } from 'vue';
 
 let DEFAULT_MONEY = 10_000;
+
+/**
+ * Sets up the stocks so the HTML can access them.
+ */
 let state = reactive({
   bank: new Bank(DEFAULT_MONEY),
   currentDay: 0,
