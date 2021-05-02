@@ -10,10 +10,10 @@
     <div class="container">
       <div class="row">
         <div class="col-sm">
-          <p>Portfolio Value:</p>
+          <p>Money available for trading:</p>
         </div>
         <div class="col-sm">
-          <p>Money available for trading:</p>
+          <p>Portfolio Value:</p>
         </div>
       </div>
       <div class="row">
