@@ -30,8 +30,8 @@
         <div class="col-sm stock">
           <Stock name="pear" />
         </div>
-        <div class ="col-sm stock">
-            <Stock name="doodle" />
+        <div class="col-sm stock">
+          <Stock name="doodle" />
         </div>
         <div class="col-sm stock">
           <Stock name="bsas" />

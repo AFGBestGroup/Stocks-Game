@@ -3,7 +3,17 @@
     <p>
       <b>{{ stock.name }}</b>
     </p>
-    <p>Cost: ${{ displayNumber(stock.cost) }}</p>
+    <p
+      v-bind:style="[
+        stock.lastPrice <= stock.cost ? 'color: green;' : 'color: red;',
+      ]"
+    >
+      Cost: ${{ displayNumber(stock.cost) }}
+      <br />
+      Change in Cost: {{ stock.lastPrice <= stock.cost ? "+" : "-" }} ${{
+        displayNumber(Math.abs(stock.cost - stock.lastPrice))
+      }}
+    </p>
     <div v-if="stock.isDividendStock()">
       <p>Dividend per Share: ${{ displayNumber(stock.rate) }}</p>
       <p>
