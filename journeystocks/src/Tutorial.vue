@@ -1,8 +1,9 @@
 <template>
   <div>
     <h1>Journey Tutorial: An Introduction to the Stock Market</h1>
+    <br>
     <h2>Personal Finance</h2>
-    
+    <br>
 
     <div>
         <h3>Introduction </h3>
@@ -12,16 +13,15 @@
             are dependent on their incomes.
         </p>
     </div>
-    <p>
-      Journey is a simple, interactive stock simulation designed to assist in
-      educating the user in how to navigate investments and increase their
-      financial literacy. Through this simulation you will be guided through
-      building and managing your own personal stock portfolio. In addition to
-      this, you will have to manage real world situations such as receiving
-      active vs. passive income, and possible financial necessities that could
-      drain your bank account. Don’t worry. We’ll start you off easy. Good luck
-      and have fun!
-    </p>
+
+    <div>
+        <h3>Income </h3>
+        <img class="floatright" alt="HALP" src="./assets/Topple.gif">
+        <p>Your life is built on top of your income, and relying on only 1 type of income 
+            solely will make your lifestyle very unstable. If you only rely on one income source, 
+            like your active income job, and that is lost for whatever reason, everything else will topple. 
+        </p>
+    </div>
 
     <button>
       <a href="/index">Back to Home Page</a>
