@@ -25,16 +25,6 @@
         </div>
       </div>
     </div>
-    <p>
-      Welcome to Journey. Journey is a simple, interactive stock simulation
-      designed to assist in educating the user in how to navigate investments
-      and increase their financial literacy. Through this simulation you will be
-      guided through building and managing your own personal stock portfolio. In
-      addition to this, you will have to manage real world situations such as
-      receiving active vs. passive income, and possible financial necessities
-      that could drain your bank account. Don’t worry. We’ll start you off easy.
-      Good luck and have fun!
-    </p>
     <div class="container">
       <div class="row">
         <div class="col-sm stock">
