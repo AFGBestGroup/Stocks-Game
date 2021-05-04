@@ -1,6 +1,17 @@
 <template>
   <div>
-    <h1>Welcome to Journey.</h1>
+    <h1>Journey Tutorial: An Introduction to the Stock Market</h1>
+    <h2>Personal Finance</h2>
+    
+
+    <div>
+        <h3>Introduction </h3>
+        <img class="floatright" alt="HALP" src="./assets/logo.png">
+        <p>Finance is a very broad topic and there are blah blah blah blah. 
+            Personal Finance. In today’s society, the majority of people and their lifestyles 
+            are dependent on their incomes.
+        </p>
+    </div>
     <p>
       Journey is a simple, interactive stock simulation designed to assist in
       educating the user in how to navigate investments and increase their
@@ -13,7 +24,7 @@
     </p>
 
     <button>
-      <a href="/tutorial">Start Tutorial</a>
+      <a href="/index">Back to Home Page</a>
     </button>
     <button>
       <a href="/game">Play Full Game</a>

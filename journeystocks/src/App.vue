@@ -57,4 +57,8 @@ input {
 .floatright {
   float: right;
 }
+
+.floatleft{
+  float: left;
+}
 </style>

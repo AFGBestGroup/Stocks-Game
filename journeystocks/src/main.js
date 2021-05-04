@@ -4,10 +4,12 @@ import App from './App.vue';
 
 import FullGame from './FullGame.vue';
 import Index from './Index.vue';
+import Tutorial from './Tutorial.vue';
 
 const routes = [
   { path: '/', component: Index },
   { path: '/game', component: FullGame },
+  { path: '/tutorial', component: Tutorial },
 ];
 
 const router = createRouter({
