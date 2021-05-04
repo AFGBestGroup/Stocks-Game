@@ -29,12 +29,15 @@
       <div class="row">
         <div class="col-sm stock">
           <Stock name="pear" />
+          <Chart name="pear" />
         </div>
         <div class="col-sm stock">
           <Stock name="doodle" />
+          <Chart name="doodle" />
         </div>
         <div class="col-sm stock">
           <Stock name="bsas" />
+          <Chart name="bsas" />
         </div>
       </div>
     </div>
@@ -54,6 +57,7 @@
 
 <script setup>
 import Stock from "./components/Stock.vue";
+import Chart from "./components/Chart.vue";
 </script>
 
 <script>
