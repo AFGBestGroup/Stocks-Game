@@ -17,6 +17,11 @@ let state = reactive({
     doodle: new Stock('Doodle', GOOG[0]),
     bsas: new DividendStock('BSAS', T[0], 0.52),
   },
+  lastPrice: {
+    pear: AAPL[0],
+    doodle: GOOG[0],
+    bsas: T[0],
+  },
 });
 
 export default state;
@@ -25,4 +30,8 @@ setInterval(() => {
   state.stocks.pear.cost = AAPL[state.currentDay];
   state.stocks.doodle.cost = GOOG[state.currentDay];
   state.stocks.bsas.cost = T[state.currentDay];
+
+  state.lastPrice.pear = AAPL[state.currentDay - 1];
+  state.lastPrice.doodle = GOOG[state.currentDay - 1];
+  state.lastPrice.bsas = T[state.currentDay - 1];
 }, 1000);

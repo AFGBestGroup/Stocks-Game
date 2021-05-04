@@ -20,37 +20,40 @@
     </div>
 
     <p v-if="stock.shares > 0">Shares owned: {{ stock.shares }}</p>
-
-    <button class="btn btn-success" v-on:click="buy(sharesToBuy)">Buy</button>
-    <input
-      type="number"
-      v-model.number="sharesToBuy"
-      name="Number of shares"
-      onkeypress="return event.charCode >=48"
-      min="0"
-    /><br />
+    <div class="p-padding">
+      <button class="btn btn-success" v-on:click="buy(sharesToBuy)">Buy</button>
+      <input
+        type="number"
+        v-model.number="sharesToBuy"
+        name="Number of shares"
+        onkeypress="return event.charCode >=48"
+        min="0"
+      />
+    </div>
     <div v-if="sharesToBuy != undefined && sharesToBuy != 0">
       <p>That will cost: ${{ displayNumber(stock.cost * sharesToBuy) }}</p>
     </div>
     <div v-else>
       <br />
     </div>
-    <br />
-    <button class="btn btn-danger" v-on:click="sell(sharesToSell)">Sell</button>
-    <input
-      type="number"
-      v-model.number="sharesToSell"
-      name="Number of shares"
-      onkeypress="return event.charCode >=48"
-      min="0"
-    /><br />
+    <div class="p-padding">
+      <button class="btn btn-danger" v-on:click="sell(sharesToSell)">
+        Sell
+      </button>
+      <input
+        type="number"
+        v-model.number="sharesToSell"
+        name="Number of shares"
+        onkeypress="return event.charCode >=48"
+        min="0"
+      />
+    </div>
     <div v-if="sharesToSell != undefined && sharesToSell != 0">
       <p>You will earn: ${{ displayNumber(stock.cost * sharesToSell) }}</p>
     </div>
     <div v-else>
       <br />
     </div>
-    <br />
   </div>
 </template>
 

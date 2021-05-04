@@ -13,6 +13,11 @@ import "bootstrap/dist/css/bootstrap-grid.min.css";
 </script>
 
 <style>
+.p-padding {
+  padding: 2% 2%;
+  margin: auto 2%;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
