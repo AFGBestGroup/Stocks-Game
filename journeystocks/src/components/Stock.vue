@@ -10,7 +10,7 @@
     >
       Cost: ${{ displayNumber(stock.cost) }}
       <br />
-      Change in Cost: {{ stock.lastPrice <= stock.cost ? "+" : "-" }} ${{
+      Day Change: {{ (stock.lastPrice <= stock.cost) ? "+" : "-" }} ${{
         displayNumber(Math.abs(stock.cost - stock.lastPrice))
       }}
     </p>
