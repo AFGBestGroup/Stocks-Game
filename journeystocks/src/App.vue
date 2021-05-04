@@ -24,6 +24,7 @@ import "bootstrap/dist/css/bootstrap-grid.min.css";
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin-top: 60px;
+  margin: 2em;
 }
 
 body {
@@ -58,7 +59,7 @@ input {
   float: right;
 }
 
-.floatleft{
+.floatleft {
   float: left;
 }
 </style>
