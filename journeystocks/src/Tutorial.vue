@@ -24,7 +24,7 @@
     </div>
 
     <button>
-      <a href="/index">Back to Home Page</a>
+      <a href="/">Back to Home Page</a>
     </button>
     <button>
       <a href="/game">Play Full Game</a>
