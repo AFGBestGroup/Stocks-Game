@@ -26,7 +26,7 @@ var interval = setInterval(() => {
   state.stocks.pear.cost = AAPL[state.currentDay];
   state.stocks.doodle.cost = GOOG[state.currentDay];
   state.stocks.bsas.cost = T[state.currentDay];
-  if(state.currentDay > 5){
+  if(state.currentDay > 365){
     router.push('end_screen');
     clearInterval(interval)
   }
