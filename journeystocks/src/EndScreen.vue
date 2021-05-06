@@ -4,6 +4,13 @@
     <p>
       Your final Portfolio Value is: ${{displayNumber(calcPortValue())}}
     </p>
+    <p>
+      You bought a total of: {{sharesBought()}} shares.
+   </p>
+
+   <p>
+      You sold a total of: {{sharesSold()}} shares.
+   </p>
 
     <button>
       <a href="/tutorial">Review Tutorial</a>
@@ -28,6 +35,20 @@ export default {
         totalStockValue += s.cost * s.shares;
       }
       return state.bank.balance + totalStockValue;
+    },
+    sharesBought() {
+      let totalSharesBought = 0;
+      for (var [_, s] of Object.entries(state.stocks)) {
+        totalSharesBought += s.totSharesBought;
+      }
+      return totalSharesBought;
+    },
+    sharesSold() {
+      let totalSharesSold = 0;
+      for (var [_, s] of Object.entries(state.stocks)) {
+        totalSharesSold += s.totSharesSold;
+      }
+      return totalSharesSold;
     },
   },
 }

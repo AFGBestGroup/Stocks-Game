@@ -14,6 +14,8 @@ export default class Stock {
     this.name = name;
     this.shares = 0;
     this.cost = cost;
+    this.totSharesBought=0;
+    this.totSharesSold=0;
   }
 
   get cost() {
@@ -31,6 +33,7 @@ export default class Stock {
    * @param bank the Bank object needed to perform the transaction
    */
   buy(amount, bank) {
+    this.totSharesBought+=amount;
     if (bank.withdraw(amount * this.cost)) {
       this.shares += amount;
     }
@@ -43,6 +46,7 @@ export default class Stock {
   buyAll(bank) {
     let total = bank.balance;
     let amount = Math.floor(total / this.cost);
+    this.totSharesBought+=amount;
     this.buy(amount, bank);
   }
 
@@ -52,6 +56,7 @@ export default class Stock {
    * @param bank the Bank object needed to perform the transaction
    */
   sell(amount, bank) {
+    this.totSharesSold+=amount;
     if (amount <= this.shares) {
       this.shares -= amount;
       bank.deposit(amount * this.cost);
@@ -63,6 +68,7 @@ export default class Stock {
    * @param bank the Bank object needed to perform the transaction
    */
   sellAll(bank) {
+    this.totSharesSold+=this.shares;
     this.sell(this.shares, bank);
   }
 
