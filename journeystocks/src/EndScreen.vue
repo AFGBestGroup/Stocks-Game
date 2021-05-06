@@ -12,6 +12,10 @@
       You sold a total of: {{sharesSold()}} shares.
    </p>
 
+   <p>
+      You still own: {{sharesBought()-sharesSold()}} shares.
+  </p>
+
     <button>
       <a href="/tutorial">Review Tutorial</a>
     </button>
