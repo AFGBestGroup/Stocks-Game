@@ -51,6 +51,7 @@
       est laborum.
     </p>
     <p>Here's how both stocks performed</p>
+    <RandomEvents />
   </div>
 </template>
 
@@ -58,6 +59,7 @@
 <script setup>
 import Stock from "./components/Stock.vue";
 import Chart from "./components/Chart.vue";
+import RandomEvents from "./components/RandomEvents.vue";
 </script>
 
 <script>
@@ -65,7 +67,17 @@ import state from "./state";
 import { displayNumber } from "./util";
 export default {
   data() {
-    return { state };
+    return {
+      state,
+      events: [
+        {
+          title: "Grandma got run over by a reindeer",
+          description:
+            "Grandma unfortunately had an unfortunate incident with one of Santa's reindeers.\nDo you wish to attend her funeral?",
+          options: [{ text: "Yes", call: () => {} }],
+        },
+      ],
+    };
   },
   methods: {
     displayNumber,

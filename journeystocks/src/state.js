@@ -18,16 +18,19 @@ let state = reactive({
     doodle: new Stock('Doodle', GOOG[0]),
     bsas: new DividendStock('BSAS', T[0], 0.52),
   },
+
+  paused: false,
 });
 
 export default state;
 var interval = setInterval(() => {
+  if (state.paused) return;
   state.currentDay++;
   state.stocks.pear.cost = AAPL[state.currentDay];
   state.stocks.doodle.cost = GOOG[state.currentDay];
   state.stocks.bsas.cost = T[state.currentDay];
-  if(state.currentDay > 365){
+  if (state.currentDay > 365) {
     router.push('end_screen');
-    clearInterval(interval)
+    clearInterval(interval);
   }
 }, 1000);

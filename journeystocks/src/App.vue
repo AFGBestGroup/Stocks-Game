@@ -1,7 +1,7 @@
 <template>
   <div>
-    <router-link to="/">Home</router-link>
-    <router-link to="/game">Full Game</router-link>
+    <a href="/">Home</a>
+    <a href="/game">Full Game</a>
 
     <router-view></router-view>
   </div>
@@ -10,6 +10,7 @@
 <script setup>
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/css/bootstrap-grid.min.css";
+import "vue-neat-modal/dist/vue-neat-modal.css";
 </script>
 
 <style>

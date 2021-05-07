@@ -25,6 +25,7 @@ export default {
   },
   mounted() {
     setInterval(() => {
+      if (state.paused) return;
       this.updateChart(state.stocks[this.name].cost);
     }, 2000);
   },
@@ -32,6 +33,7 @@ export default {
     return {
       chartOptions: {
         chart: {
+          toolbar: { show: false },
           id: "vuechart-example",
         },
         xaxis: {
