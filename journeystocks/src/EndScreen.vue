@@ -5,23 +5,38 @@
       Your final Portfolio Value is: ${{displayNumber(calcPortValue())}}
     </p>
     <p>
-      You bought a total of: {{sharesBought()}} shares.
+      You bought a total of {{sharesBought()}} shares.
    </p>
 
    <p>
-      You sold a total of: {{sharesSold()}} shares.
+      You sold a total of {{sharesSold()}} shares.
    </p>
 
    <p>
-      You still own: {{sharesBought()-sharesSold()}} shares.
+      You still own {{sharesBought()-sharesSold()}} shares after 1 year.
   </p>
 
+    <button>
+      <a href="/">Back to Homepage</a>
+    </button>
     <button>
       <a href="/tutorial">Review Tutorial</a>
     </button>
     <button>
       <a href="/game">Try Again</a>
     </button>
+
+    <p>
+      Here are some links to try out if you want to learn more about the stock market:
+      <span>
+        <br>
+        <br>
+        <a href="https://www.edutopia.org/article/10-free-financial-literacy-games-high-school-students">10 Free Financial Literacy Games for High School Students</a>
+        <br>
+        <br>
+        <a href="https://www.saveandinvest.org/educate-youth/lesson-plans-and-assessments">Financial Literacy Lesson Plans and Assessments</a>
+    </span>
+  </p>
   </div>
 </template>
 
