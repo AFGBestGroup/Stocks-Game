@@ -126,8 +126,8 @@ export default {
     },
   },
   mounted() {
-    let min = 3 * 1000; // seconds
-    let max = 5 * 1000; // seconds
+    let min = 20 * 1000; // seconds
+    let max = 75 * 1000; // seconds
 
     setTimeout(() => {
       this.grandmaEvent = true;
