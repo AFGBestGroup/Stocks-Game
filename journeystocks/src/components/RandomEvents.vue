@@ -67,6 +67,7 @@ export default {
         this.didNotAttendPartyEvent;
 
       if (open) state.paused = true;
+      // if modal is open, don't update rest of game.
       else state.paused = false;
 
       return open;
