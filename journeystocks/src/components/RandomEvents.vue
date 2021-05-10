@@ -67,6 +67,7 @@ export default {
         this.didNotAttendPartyEvent;
 
       if (open) state.paused = true;
+      // if modal is open, don't update rest of game.
       else state.paused = false;
 
       return open;
@@ -126,8 +127,8 @@ export default {
     },
   },
   mounted() {
-    let min = 3 * 1000; // seconds
-    let max = 5 * 1000; // seconds
+    let min = 20 * 1000; // seconds
+    let max = 75 * 1000; // seconds
 
     setTimeout(() => {
       this.grandmaEvent = true;
