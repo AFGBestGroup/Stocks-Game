@@ -18,7 +18,18 @@
       </div>
       <div class="row">
         <div class="col-sm">
-          <p>${{ displayNumber(state.bank.balance) }}</p>
+          <p>
+            ${{ displayNumber(state.bank.balance) }}
+            <span
+              v-bind:style="[
+                'font-size: 80%',
+                state.bank.balance - state.bank.lastBalance > 0
+                  ? 'color: green;'
+                  : 'color: red;',
+              ]"
+              >{{ changeInBalance }}
+            </span>
+          </p>
         </div>
         <div class="col-sm">
           <p>${{ displayNumber(calcPortValue()) }}</p>
@@ -54,30 +65,25 @@ import RandomEvents from "./components/RandomEvents.vue";
 
 <script>
 import state from "./state";
-import { displayNumber } from "./util";
+import { displayNumber, calcPortValue } from "./util";
 export default {
   data() {
     return {
       state,
-      events: [
-        {
-          title: "Grandma got run over by a reindeer",
-          description:
-            "Grandma unfortunately had an unfortunate incident with one of Santa's reindeers.\nDo you wish to attend her funeral?",
-          options: [{ text: "Yes", call: () => {} }],
-        },
-      ],
     };
+  },
+  computed: {
+    changeInBalance() {
+      let change = state.bank.balance - state.bank.lastBalance;
+
+      if (change == 0) return;
+      if (change > 0) return "+$" + displayNumber(change);
+      else return "-$" + displayNumber(change).slice(1);
+    },
   },
   methods: {
     displayNumber,
-    calcPortValue() {
-      let totalStockValue = 0;
-      for (var [_, s] of Object.entries(this.state.stocks)) {
-        totalStockValue += s.cost * s.shares;
-      }
-      return this.state.bank.balance + totalStockValue;
-    },
+    calcPortValue,
   },
 };
 </script>
