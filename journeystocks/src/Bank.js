@@ -8,16 +8,17 @@ export default class Bank {
    */
   constructor(initialBalance) {
     this.balance = initialBalance;
+    this.lastBalance = initialBalance;
   }
 
   /**
    * Withdraws a specified amount of money from the Bank Account, if there are sufficient funds.
    * @param amount The amount of money to withdraw
    * @return Whether or not the user had the specified amount of funds, and the transaction was complete or not.
-  */
+   */
   withdraw(amount) {
     if (amount > this.balance) return false;
-
+    this.lastBalance = this.balance;
     this.balance -= amount;
     return true;
   }
@@ -25,8 +26,9 @@ export default class Bank {
   /**
    * Deposits a specified amount of money into the Bank Account.
    * @param amount The amount of money to deposit
-  */
+   */
   deposit(amount) {
+    this.lastBalance = this.balance;
     this.balance += amount;
   }
 }
