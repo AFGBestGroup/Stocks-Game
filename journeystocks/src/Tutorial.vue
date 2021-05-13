@@ -26,13 +26,11 @@
         income solely will make your lifestyle very unstable. If you only rely
         on one income source, like your active income job, and that is lost for
         whatever reason, everything else will topple.
-      </p>
-      <p>
+        <br>
         If you and your lifestyle are built on multiple sources of income, then
         your lifestyle is more stable, as you have other forms of income to fall
         back on if one or more fails.
-      </p>
-      <p>
+        <br>
         As you can see, there are many benefits to having multiple forms of
         income. However, you may be wondering, how am I supposed to find time to
         work more than 1 or 2 jobs and still enjoy my lifestyle that I’m working
@@ -41,6 +39,7 @@
     </div>
     <div>
       <h3>Active Vs. Passive Income</h3>
+      <img class="floatleft" alt="Active vs. Passive Income Clipart" src="./assets/ActivePassiveIncome.jpg" />
       <p>
         There are two main types of income, passive and active.
         <b>Active income</b> refers to income received for performing a service.
@@ -60,6 +59,7 @@
     </div>
     <div>
       <h3>Assets vs. Liabilities</h3>
+      <img class="floatright" alt="Assets vs. Liabilities Clipart" src="./assets/AssetsLiabilities.jpg" />
       <p>
         <b>Assets</b> are things that people own that earn them money, and
         <b>liabilities</b> cost them more money than earn. Basically, assets
@@ -75,6 +75,7 @@
       </p>
     </div>
     <div>
+      <img class="floatleft" alt="Diversify your Portfolio Clipart" src="./assets/WhyShouldYouInvest.jpg" />
       <h3>Why Should You Invest?</h3>
       <p>
         Investing your money allows you to make money with money you already
@@ -191,8 +192,7 @@
       <h3>Buy and Sell Buttons</h3>
       <p>
         With these two buttons you can buy and sell your stocks. You can choose
-        the number of stocks to buy or sell, or you can choose to purchase or
-        sell the max possible.
+        the number of stocks to buy or sell.
       </p>
       <Stock name="pear" />
     </div>
