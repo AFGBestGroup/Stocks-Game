@@ -206,9 +206,13 @@
   </div>
 </template>
 
+<script setup>
+import Stock from "./components/Stock.vue";
+</script>
+
 <script>
 import state from "./state.js";
-import { displayNumber } from "./util";
+import { displayNumber, calcPortValue } from "./util";
 export default {
   data() {
     return {
@@ -217,6 +221,7 @@ export default {
   },
   methods: {
     displayNumber,
+    calcPortValue,
   },
 };
 </script>
