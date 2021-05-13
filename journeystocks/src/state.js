@@ -24,7 +24,7 @@ let state = reactive({
 
 export default state;
 var interval = setInterval(() => {
-  if (state.currentDay % 20 == 0 && state.currentDay != 0) {
+  if (state.currentDay % 91 == 0 && state.currentDay != 0) {
     for (const [_, stock] of Object.entries(state.stocks)) {
       if (stock.isDividendStock()) {
         state.bank.deposit(stock.getDividend());
