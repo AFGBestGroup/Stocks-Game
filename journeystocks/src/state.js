@@ -24,6 +24,14 @@ let state = reactive({
 
 export default state;
 var interval = setInterval(() => {
+  if (state.currentDay % 20 == 0 && state.currentDay != 0) {
+    for (const [_, stock] of Object.entries(state.stocks)) {
+      if (stock.isDividendStock()) {
+        state.bank.deposit(stock.getDividend());
+      }
+    }
+  }
+
   if (state.paused) return;
   state.currentDay++;
   state.stocks.pear.cost = AAPL[state.currentDay];

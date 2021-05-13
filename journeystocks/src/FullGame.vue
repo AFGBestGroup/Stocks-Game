@@ -1,3 +1,19 @@
+<style>
+slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+</style>
+
 <template>
   <div>
     <p>
@@ -20,15 +36,18 @@
         <div class="col-sm">
           <p>
             ${{ displayNumber(state.bank.balance) }}
-            <span
-              v-bind:style="[
-                'font-size: 80%',
-                state.bank.balance - state.bank.lastBalance > 0
-                  ? 'color: green;'
-                  : 'color: red;',
-              ]"
-              >{{ changeInBalance }}
-            </span>
+            <transition name="slide-fade" appear>
+              <span
+                :key="changeInBalance"
+                v-bind:style="[
+                  'font-size: 80%',
+                  state.bank.balance - state.bank.lastBalance > 0
+                    ? 'color: green;'
+                    : 'color: red;',
+                ]"
+                >{{ changeInBalance }}
+              </span>
+            </transition>
           </p>
         </div>
         <div class="col-sm">

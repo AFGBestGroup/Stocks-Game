@@ -24,10 +24,7 @@
         style="margin: 0.5em"
         v-for="option in options"
         v-bind:key="option.text"
-        @click="
-          option.call();
-          isOpen = false;
-        "
+        @click="option.call()"
       >
         {{ option.text }}
       </button>
