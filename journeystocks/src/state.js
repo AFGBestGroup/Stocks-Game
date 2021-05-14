@@ -24,19 +24,26 @@ let state = reactive({
 
 export default state;
 var interval = setInterval(() => {
-  if (state.currentDay % 91 == 0 && state.currentDay != 0) {
-    for (const [_, stock] of Object.entries(state.stocks)) {
-      if (stock.isDividendStock()) {
-        state.bank.deposit(stock.getDividend());
-      }
-    }
-  }
-
   if (state.paused) return;
   state.currentDay++;
   state.stocks.pear.cost = AAPL[state.currentDay];
   state.stocks.doodle.cost = GOOG[state.currentDay];
   state.stocks.bsas.cost = T[state.currentDay];
+  if (state.currentDay % 91 == 0 && state.currentDay != 0) {
+    let payout = 0;
+    for (const [_, stock] of Object.entries(state.stocks)) {
+      if (stock.isDividendStock()) {
+        payout += stock.getDividend();
+      }
+    }
+
+    state.bank.deposit(payout);
+  }
+
+  if (state.currentDay % 7 && state.currentDay != 0) {
+    state.bank.deposit(100);
+  }
+
   if (state.currentDay > 365) {
     router.push('end_screen');
     clearInterval(interval);

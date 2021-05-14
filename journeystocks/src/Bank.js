@@ -28,7 +28,7 @@ export default class Bank {
    * @param amount The amount of money to deposit
    */
   deposit(amount) {
-    this.lastBalance = this.balance;
+    if (amount > 0) this.lastBalance = this.balance;
     this.balance += amount;
   }
 }
