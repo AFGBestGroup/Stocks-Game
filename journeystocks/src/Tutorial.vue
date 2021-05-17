@@ -5,7 +5,7 @@
     <h2>Personal Finance</h2>
     <br />
 
-    <div>
+    <div class="clearfix">
       <h3>Introduction</h3>
       <img class="floatright" style="width: 14%; height: 14%;" alt="Journey Logo" src="./assets/profile.png" />
       <p>
@@ -18,9 +18,9 @@
       </p>
     </div>
 
-    <div>
+    <div class="clearfix">
       <h3>Income</h3>
-      <img class="floatright" alt="HALP" src="./assets/Topple.gif" />
+      <img class="floatright blackborder" alt="HALP" src="./assets/Topple.gif" />
       <p>
         Your life is built on top of your income, and relying on only 1 type of
         income solely will make your lifestyle very unstable. If you only rely
@@ -37,9 +37,9 @@
         so hard to support? The answer is simple, you don’t.
       </p>
     </div>
-    <div>
+    <div class="clearfix">
       <h3>Active Vs. Passive Income</h3>
-      <img class="floatleft" alt="Active vs. Passive Income Clipart" src="./assets/ActivePassiveIncome.jpg" />
+      <img class="floatleft blackborder" alt="Active vs. Passive Income Clipart" src="./assets/ActivePassiveIncome.jpg" />
       <p>
         There are two main types of income, passive and active.
         <b>Active income</b> refers to income received for performing a service.
@@ -59,14 +59,14 @@
     </div>
     <div>
       <h3>Assets vs. Liabilities</h3>
-      <img class="floatright smallImg" alt="Assets vs. Liabilities Clipart" src="./assets/AssetsLiabilities.jpg" />
+      <img class="floatright smallImg blackborder" alt="Assets vs. Liabilities Clipart" src="./assets/AssetsLiabilities.jpg" />
       <p>
         <b>Assets</b> are things that people own that earn them money, and
         <b>liabilities</b> cost them more money than earn. Basically, assets
         give you money and liabilities take money from you.
       </p>
     </div>
-    <div>
+    <div class="clearfix">
       <h3>Types of Assets</h3>
       <p>
         There are many different types of assets, some easier to get into than
@@ -74,8 +74,8 @@
         into it. Spend money to earn money.
       </p>
     </div>
-    <div>
-      <img class="floatleft smallImg" alt="Diversify your Portfolio Clipart" src="./assets/WhyShouldYouInvest.jpg" />
+    <div class="clearfix">
+      <img class="floatleft smallImg blackborder" alt="Diversify your Portfolio Clipart" src="./assets/WhyShouldYouInvest.jpg" />
       <h3>Why Should You Invest?</h3>
       <p>
         Investing your money allows you to make money with money you already
@@ -95,7 +95,7 @@
       </p>
     </div>
 
-    <div>
+    <div class="clearfix">
       <h3>The Stock Market</h3>
       <p>
         The stock market functions very similarly to an auction house. People
@@ -104,7 +104,7 @@
       </p>
     </div>
 
-    <div>
+    <div class="clearfix">
       <h3>Types of Stocks</h3>
       <p>
         There are many different types of stocks, including but not limited to,
@@ -119,7 +119,7 @@
 
     <h2>Journey Stocks Simulation</h2>
 
-    <div>
+    <div class="clearfix">
       <h3>Introduction</h3>
       <p>
         Journey is an interactive stock simulator where you will be able to
@@ -170,7 +170,7 @@
     <Stock name="pear" />
     <Chart name="pear" />
 
-    <div>
+    <div class="clearfix">
       <h3>Day Counter</h3>
       <img class="floatleft smallImg blackborder" alt="Day Counter" src="./assets/DayCount.png" />
       <p>
@@ -181,7 +181,7 @@
       </p>
     </div>
 
-<div>
+<div class="clearfix">
       <h3>Buy and Sell Buttons</h3>
       <img class="floatright smallImg blackborder" alt="Buy and Sell Buttons" src="./assets/BuySellButtons.png" /> 
       <p>
@@ -191,7 +191,7 @@
       
 </div>
 
-    <div>
+    <div class="clearfix">
       <br>
       <h3>Balances</h3>
       <img class="floatright blackborder" alt="Balances" src="./assets/MoneyBalances.png" />
@@ -201,7 +201,7 @@
       </p>
     </div>
 
-    <div>
+    <div class="clearfix">
       <h3>Cash Available for Trading</h3>
       <img class="floatright smallImg blackborder" alt="Cash Available for Trading" src="./assets/MoneyForTrading.png" />
       <p>
@@ -217,7 +217,7 @@
       </p>
     </div>
 
-    <div>
+    <div class="clearfix">
       <h3>Portfolio Value</h3>
       <img class="floatleft smallImg blackborder" alt="Portfolio Value" src="./assets/PortfolioValue.png" />
       <p>
@@ -230,7 +230,9 @@
       </p>
     </div>
 
-    <div>
+    
+
+    <div class="clearfix">
       <h3>Stocks</h3>
       <img class="floatright  blackborder" alt="Buy and Sell Buttons" src="./assets/StocksAndCharts.png" />
       <p>
@@ -239,14 +241,46 @@
         stock’s current price, their day change, as well as the number of shares
         of the individual stock that you own.
       </p>
+
+       <button>
+        <a href="/">Back to Home Page</a>
+      </button>
+     <button>
+        <a href="/game">Play Full Game</a>
+      </button>
     </div>
 
-    <button>
-      <a href="/">Back to Home Page</a>
-    </button>
-    <button>
-      <a href="/game">Play Full Game</a>
-    </button>
+
+   
+
+    <div class="clearfix">
+      <h3>References</h3>
+      <p>
+       Little, K. (2020, August 24). <i>A Look at the Major Types of Risk for Stock Investors.</i> The Balance. 
+       <span>
+         <a href="https://www.thebalance.com/major-types-of-risk-for-stock-investors-3141315">https://www.thebalance.com/major-types-of-risk-for-stock-investors-3141315</a>
+        </span>
+
+      </p>
+      <p>
+       Morah, C. (n.d.). <i>Bond Market vs. Stock Market: What’s the Difference?</i> Investopedia. Retrieved May 17, 2021, from 
+       <span>
+         <a href="https://www.investopedia.com/ask/answers/09/difference-between-bond-stock-market.asp">https://www.investopedia.com/ask/answers/09/difference-between-bond-stock-market.asp</a>
+        </span>
+
+      </p>
+      <p>
+       <i>10 Free Financial Literacy Games for High School Students</i>. (n.d.). Edutopia. Retrieved May 17, 2021, from 
+       <span>
+         <a href="https://www.edutopia.org/article/10-free-financial-literacy-games-high-school-students">https://www.edutopia.org/article/10-free-financial-literacy-games-high-school-students</a>
+        </span>
+
+      </p>
+    </div>
+
+    
+
+    
   </div>
 </template>
 

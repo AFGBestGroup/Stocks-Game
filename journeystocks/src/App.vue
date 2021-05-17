@@ -37,10 +37,14 @@ body {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 3em;
 }
 
 h2 {
+  font-size: 2em;
+}
+
+h3{
   font-size: 1.5em;
 }
 
@@ -83,5 +87,9 @@ img {
 	border-color: black;
 	border-radius: 5px;
 
+}
+
+.clearfix{
+	overflow: auto;
 }
 </style>
