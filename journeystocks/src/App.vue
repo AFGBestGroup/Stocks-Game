@@ -1,7 +1,7 @@
 <template>
   <div>
     <a href="/">Home</a>
-    <a href="/game">Full Game</a>
+    <a style="margin-left: 10px" href="/game">Full Game</a>
 
     <router-view></router-view>
   </div>
@@ -57,7 +57,7 @@ img {
   margin-right: 20px;
 }
 
-.smallImg{
+.smallImg {
   width: 20%;
   height: 20%;
 }
