@@ -44,7 +44,7 @@ var interval = setInterval(() => {
     state.bank.deposit(100);
   }
 
-  if (state.currentDay > 10) {
+  if (state.currentDay > 365) {
     router.push('end_screen');
     clearInterval(interval);
   }
