@@ -29,7 +29,7 @@ import "vue-neat-modal/dist/vue-neat-modal.css";
 }
 
 body {
-  background: #c6e2f0;
+  background: #baeff8;
   margin: 0px;
 }
 
@@ -72,5 +72,13 @@ img {
 
 .floatleft {
   float: left;
+}
+
+.blackborder {
+	border-style: solid;
+	border-width: 3px;
+	border-color: black;
+	border-radius: 5px;
+
 }
 </style>

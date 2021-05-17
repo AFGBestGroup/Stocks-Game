@@ -129,29 +129,72 @@
       </p>
     </div>
 
+<p>
+      Day Count: <br />
+      {{ state.currentDay }}
+    </p>
+    <br />
+    <h2>Balances</h2>
+<div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <p>Money available for trading:</p>
+        </div>
+        <div class="col-sm">
+          <p>Portfolio Value:</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <p>
+            ${{ displayNumber(state.bank.balance) }}
+            <transition name="slide-fade" appear>
+              <span
+                :key="changeInBalance"
+                v-bind:style="[
+                  'font-size: 80%',
+                  state.bank.balance - state.bank.lastBalance > 0
+                    ? 'color: green;'
+                    : 'color: red;',
+                ]"
+                >{{ changeInBalance }}
+              </span>
+            </transition>
+          </p>
+        </div>
+        <div class="col-sm">
+          <p>${{ displayNumber(calcPortValue()) }}</p>
+        </div>
+      </div>
+    </div>
+    <Stock name="pear" />
+    <Chart name="pear" />
+
     <div>
       <h3>Day Counter</h3>
+      <img class="floatleft smallImg blackborder" alt="Day Counter" src="./assets/DayCount.png" />
       <p>
         This is your day count. Here you can see what day of the simulation it
         is. You can also keep track of how far away you are from both payday and
         dividend stock payout dates. The simulation will run for 365 virtual
         days.
       </p>
-
-      <strong>Current Day: {{ state.currentDay }}</strong>
     </div>
 
 <div>
       <h3>Buy and Sell Buttons</h3>
+      <img class="floatright smallImg blackborder" alt="Buy and Sell Buttons" src="./assets/BuySellButtons.png" /> 
       <p>
         With these two buttons you can buy and sell your stocks. You can choose
         the number of stocks to buy or sell.
       </p>
-      <Stock name="pear" />
+      
 </div>
 
     <div>
+      <br>
       <h3>Balances</h3>
+      <img class="floatright blackborder" alt="Balances" src="./assets/MoneyBalances.png" />
       <p>
         Under balances, you can see how much money you have and your current net
         worth.
@@ -160,6 +203,7 @@
 
     <div>
       <h3>Cash Available for Trading</h3>
+      <img class="floatright smallImg blackborder" alt="Cash Available for Trading" src="./assets/MoneyForTrading.png" />
       <p>
         This is your cash available for trading. This is the amount of money you
         have physically available to buy stocks with. This is also the money
@@ -171,11 +215,11 @@
         As money enters or leaves your account, you will see that displayed next
         to this number.
       </p>
-      <strong>${{ displayNumber(state.bank.balance) }}</strong>
     </div>
 
     <div>
       <h3>Portfolio Value</h3>
+      <img class="floatleft smallImg blackborder" alt="Portfolio Value" src="./assets/PortfolioValue.png" />
       <p>
         Your portfolio value is the total value of all your assets in this
         account. This includes all your cash as well as everything you have in
@@ -184,11 +228,11 @@
         money is added and removed from your money available for trading
         account.
       </p>
-      <strong>${{ displayNumber(calcPortValue()) }}</strong>
     </div>
 
     <div>
       <h3>Stocks</h3>
+      <img class="floatright  blackborder" alt="Buy and Sell Buttons" src="./assets/StocksAndCharts.png" />
       <p>
         These are the stocks that you can buy and see. You can watch their
         trends in the graph and buy and sell when you want. You can see the
