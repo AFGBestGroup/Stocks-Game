@@ -20,3 +20,9 @@
     </button>
   </div>
 </template>
+
+<style scoped>
+h1 {
+  margin-top: 30px;
+}
+</style>

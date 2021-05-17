@@ -45,7 +45,10 @@ var interval = setInterval(() => {
   }
 
   if (state.currentDay > 365) {
-    router.push('end_screen');
-    clearInterval(interval);
+    if (router.currentRoute.value.path !== '/tutorial') {
+      console.log(router.currentRoute.value.path);
+      router.push('end_screen');
+      clearInterval(interval);
+    }
   }
 }, 1000);
