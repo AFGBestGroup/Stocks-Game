@@ -7,7 +7,7 @@
 
     <div>
       <h3>Introduction</h3>
-      <img class="floatright" alt="HALP" src="./assets/logo.png" />
+      <img class="floatright" style="width: 14%; height: 14%;" alt="Journey Logo" src="./assets/profile.png" />
       <p>
         Finance is a very broad topic and there are many different parts to
         fully understanding it. Understanding your own
@@ -59,7 +59,7 @@
     </div>
     <div>
       <h3>Assets vs. Liabilities</h3>
-      <img class="floatright" alt="Assets vs. Liabilities Clipart" src="./assets/AssetsLiabilities.jpg" />
+      <img class="floatright smallImg" alt="Assets vs. Liabilities Clipart" src="./assets/AssetsLiabilities.jpg" />
       <p>
         <b>Assets</b> are things that people own that earn them money, and
         <b>liabilities</b> cost them more money than earn. Basically, assets
@@ -75,7 +75,7 @@
       </p>
     </div>
     <div>
-      <img class="floatleft" alt="Diversify your Portfolio Clipart" src="./assets/WhyShouldYouInvest.jpg" />
+      <img class="floatleft smallImg" alt="Diversify your Portfolio Clipart" src="./assets/WhyShouldYouInvest.jpg" />
       <h3>Why Should You Invest?</h3>
       <p>
         Investing your money allows you to make money with money you already
@@ -141,6 +141,15 @@
       <strong>Current Day: {{ state.currentDay }}</strong>
     </div>
 
+<div>
+      <h3>Buy and Sell Buttons</h3>
+      <p>
+        With these two buttons you can buy and sell your stocks. You can choose
+        the number of stocks to buy or sell.
+      </p>
+      <Stock name="pear" />
+</div>
+
     <div>
       <h3>Balances</h3>
       <p>
@@ -186,15 +195,6 @@
         stock’s current price, their day change, as well as the number of shares
         of the individual stock that you own.
       </p>
-    </div>
-
-    <div>
-      <h3>Buy and Sell Buttons</h3>
-      <p>
-        With these two buttons you can buy and sell your stocks. You can choose
-        the number of stocks to buy or sell.
-      </p>
-      <Stock name="pear" />
     </div>
 
     <button>

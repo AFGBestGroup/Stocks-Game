@@ -51,6 +51,16 @@ p {
 input {
   width: 5em;
 }
+
+img {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.smallImg{
+  width: 20%;
+  height: 20%;
+}
 .inline {
   margin: 0px;
   display: inline;
