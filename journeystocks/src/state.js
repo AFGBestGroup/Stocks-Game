@@ -40,7 +40,7 @@ var interval = setInterval(() => {
     state.bank.deposit(payout);
   }
 
-  if (state.currentDay % 7 == 0 && state.currentDay != 0) {
+  if (state.currentDay % 21 == 0 && state.currentDay != 0) {
     state.bank.deposit(100);
   }
 
