@@ -10,7 +10,7 @@
     >
       Cost: ${{ displayNumber(stock.cost) }}
       <br />
-      Day Change: {{ (stock.lastPrice <= stock.cost) ? "+" : "-" }} ${{
+      Day Change: {{ stock.lastPrice <= stock.cost ? "+" : "-" }} ${{
         displayNumber(Math.abs(stock.cost - stock.lastPrice))
       }}
     </p>
@@ -29,7 +29,7 @@
       <p>Pays on day: N/A</p>
     </div>
 
-    <p v-if="stock.shares > 0">Shares owned: {{ stock.shares }}</p>
+    <p>Shares owned: {{ stock.shares }}</p>
     <div class="p-padding">
       <button class="btn btn-success" v-on:click="buy(sharesToBuy)">Buy</button>
       <input
