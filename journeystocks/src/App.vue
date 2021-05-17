@@ -1,8 +1,8 @@
 <template>
   <div>
     <a href="/">Home</a>
-    <a style="margin-left: 10px" href="/game">Full Game</a>
-
+    <a class="navbar-item" href="/tutorial">Tutorial</a>
+    <a class="navbar-item" href="/game">Full Game</a>
     <router-view></router-view>
   </div>
 </template>
@@ -14,6 +14,9 @@ import "vue-neat-modal/dist/vue-neat-modal.css";
 </script>
 
 <style>
+.navbar-item {
+  margin-left: 10px;
+}
 .p-padding {
   padding: 2% 2%;
   margin: auto 2%;
