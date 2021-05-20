@@ -59,15 +59,15 @@ slide-fade-enter-active {
       <div class="row">
         <div class="col-sm stock">
           <Stock name="pear" />
-          <!-- <Chart name="pear" /> -->
+          <Chart name="pear" />
         </div>
         <div class="col-sm stock">
           <Stock name="doodle" />
-          <!-- <Chart name="doodle" /> -->
+          <Chart name="doodle" />
         </div>
         <div class="col-sm stock">
           <Stock name="bsas" />
-          <!-- <Chart name="bsas" /> -->
+          <Chart name="bsas" />
         </div>
       </div>
     </div>
@@ -78,7 +78,7 @@ slide-fade-enter-active {
 
 <script setup>
 import Stock from "./components/Stock.vue";
-// import Chart from "./components/Chart.vue";
+import Chart from "./components/Chart.vue";
 import RandomEvents from "./components/RandomEvents.vue";
 </script>
 
