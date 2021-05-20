@@ -9,6 +9,4 @@
 * Incrementally introducing stocks: day 0 has 1 stock, day 30 has 2, day 60 has 3, day 90 has 4.
 * Link to the website here: https://stocks-game.pages.dev/
 ## TODO
-* Work on Tutorial.vue
-* Fill out test documents
-*     Note: Do the simpler tests before Thursday
+* Have a great summer!
